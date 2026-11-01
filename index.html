@@ -4,27 +4,54 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>NEO Poster</title>
-<style>
-body{margin:0;background:#050506;color:#f2f2f2;font:15px/1.6 Consolas,"Cascadia Mono",monospace;padding:40px 20px}
-.box{max-width:720px;margin:0 auto;border:1.5px solid #f2f2f2;padding:28px 32px}
-h1{font:600 28px Bahnschrift,"Segoe UI",sans-serif;letter-spacing:3px;margin:0 0 6px}
-.hatch{height:8px;background:repeating-linear-gradient(135deg,#f2f2f2 0 2px,transparent 2px 6px);margin:14px 0 22px}
-a{color:#f2f2f2}
-.mut{color:#9a9aa2}
-</style>
+<meta name="description" content="NEO Poster is NEO's desktop tool for scheduling and publishing its own videos and images to its own social accounts.">
+<link rel="icon" href="icon.png">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="box">
-  <h1>NEO // POSTER</h1>
-  <div class="mut">An internal tool by NEO</div>
+<nav><div class="wrap"><img src="icon.png" alt=""><b>NEO // POSTER</b>
+  <a href="./" class="on">HOME</a><a href="privacy/">PRIVACY</a><a href="terms/">TERMS</a></div></nav>
+
+<main class="wrap">
+  <h1>Automated publishing<br>for NEO's own content.</h1>
+  <p class="lead mut">NEO Poster is a desktop app that turns NEO's gameplay clips and outfit pictures into scheduled posts,
+  then publishes them to NEO's own accounts through each platform's official API, on a steady, rate-limited schedule.</p>
   <div class="hatch"></div>
-  <p>NEO is a Roblox experience where you scroll through outfits and see every item in them.
-  NEO Poster is the private desktop app the NEO team uses to schedule and publish NEO's own
-  images and videos to NEO's own Pinterest and YouTube accounts.</p>
-  <p>It is not a public service and does not access anyone else's accounts.</p>
-  <p>Play NEO: <a href="https://www.roblox.com/games/76077980970117">roblox.com/games/76077980970117</a><br>
-  <a href="privacy/">Privacy policy</a><br>
-  Contact: neofficialaa@gmail.com</p>
-</div>
+
+  <h2>HOW IT WORKS</h2>
+  <div class="flow">
+    <div class="step"><div class="n">01</div><h3>CAPTURE</h3><span class="mut">Screenshots and clips from the NEO Roblox experience land in a local folder.</span></div>
+    <div class="step"><div class="n">02</div><h3>PREPARE</h3><span class="mut">Outfit pictures are cropped and framed automatically. Videos stay untouched at full quality.</span></div>
+    <div class="step"><div class="n">03</div><h3>SCHEDULE</h3><span class="mut">Each post gets a title, caption and hashtags, then the next free slot inside the active hours.</span></div>
+    <div class="step"><div class="n">04</div><h3>PUBLISH</h3><span class="mut">At its slot, the post is sent through the official API of each platform it targets.</span></div>
+  </div>
+
+  <h2>PLATFORMS</h2>
+  <div class="grid">
+    <div class="card"><span class="tag">LIVE</span><h3>YOUTUBE SHORTS</h3><span class="mut">Uploads vertical videos to NEO's channel with the YouTube Data API.</span></div>
+    <div class="card"><span class="tag">IN SETUP</span><h3>TIKTOK</h3><span class="mut">Sends videos to NEO's TikTok inbox as drafts with the Content Posting API. A person finishes and posts each draft in TikTok.</span></div>
+    <div class="card"><span class="tag">IN SETUP</span><h3>INSTAGRAM</h3><span class="mut">Publishes Reels and pictures to NEO's professional account with the Instagram API.</span></div>
+    <div class="card dim"><span class="tag dim">PLANNED</span><h3>PINTEREST</h3><span class="mut">Outfit pictures as Pins on NEO's boards.</span></div>
+  </div>
+
+  <h2>OPEN BY DESIGN</h2>
+  <p class="mut">Exactly what NEO Poster can and can't do. Nothing here is hidden behind a server.</p>
+  <table>
+    <tr><th>PLATFORM</th><th>PERMISSION IT ASKS FOR</th><th>WHAT IT'S USED FOR</th></tr>
+    <tr><td>YouTube</td><td>youtube.upload, youtube.readonly</td><td>Upload NEO's videos; show which channel is linked.</td></tr>
+    <tr><td>TikTok</td><td>user.info.basic, video.upload</td><td>Show which account is linked; send videos to that account's drafts.</td></tr>
+    <tr><td>Instagram</td><td>instagram_business_basic, instagram_business_content_publish</td><td>Show which account is linked; publish NEO's Reels and pictures.</td></tr>
+  </table>
+  <p class="li">Signs in only to NEO's own accounts. It never reads followers, messages, comments or other users' data.</p>
+  <p class="li">Runs entirely on the NEO team's computer. There is no NEO Poster server, database or cloud copy.</p>
+  <p class="li">Rate limits are built in: a daily cap per platform and a minimum gap between posts, so it never floods a feed.</p>
+  <p class="li">Every account link can be removed at any time from the platform's own settings.</p>
+
+  <h2>ABOUT NEO</h2>
+  <p class="mut">NEO is a Roblox experience where you scroll a feed of outfits and see every item in them.
+  <a href="https://www.roblox.com/games/76077980970117">Play NEO on Roblox</a>.</p>
+</main>
+
+<footer><div class="wrap"><a href="privacy/">Privacy Policy</a><a href="terms/">Terms of Service</a><a href="mailto:neofficialaa@gmail.com">neofficialaa@gmail.com</a><br>&copy; 2026 NEO</div></footer>
 </body>
 </html>
